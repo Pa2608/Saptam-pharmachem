@@ -1,0 +1,43 @@
+/* Keep each page banner contained, centered and visually consistent. */
+.hero,
+.about-hero,
+.contact-hero {
+  width: min(1440px, calc(100% - 20px));
+  min-height: 360px;
+  margin: 10px auto 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  text-align: left;
+}
+.hero-content { text-align: left; }
+.hero-content > * { margin-left: 0; margin-right: 0; }
+.hero-actions { justify-content: flex-start; }
+
+.about-hero { display: grid; place-items: center; text-align: left; }
+.about-hero .hero-inner { display: flex; flex-direction: column; align-items: flex-start; }
+.about-hero .breadcrumb { justify-content: flex-start; }
+
+.contact-hero { display: grid; place-items: center; text-align: left; }
+.contact-hero-content { text-align: left; }
+.contact-hero-content > p { margin-right: 0; margin-left: 0; }
+.contact-hero .breadcrumb { justify-content: flex-start; }
+
+@media (max-width: 700px) {
+  .hero,
+  .about-hero,
+  .contact-hero {
+    width: calc(100% - 16px);
+    min-height: 300px;
+    margin-top: 8px;
+  }
+  .hero-actions { justify-content: flex-start; }
+}
+
+@media (max-width: 430px) {
+  .hero-actions { align-items: flex-start; }
+}

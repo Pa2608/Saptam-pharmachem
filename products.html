@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse Saptam Pharmachem's pharmaceutical raw material catalog, including APIs, excipients, sweeteners, vitamins, amino acids and chemicals.">
+  <meta property="og:title" content="Our Products | Saptam Pharmachem">
+  <meta property="og:description" content="Explore pharmaceutical raw material categories and request product quotations.">
+  <title>Our Products | Saptam Pharmachem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/pages/products.css">
+  <link rel="stylesheet" href="assets/css/page-hero.css?v=1">
+  <link rel="stylesheet" href="assets/css/header.css?v=2">
+  <link rel="stylesheet" href="assets/css/whatsapp.css?v=1">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="top"><div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="Saptam Pharmachem home"><span class="brand-mark" aria-hidden="true">✦</span><span>Saptam Pharmachem</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="index.html">HOME</a><a href="about.html">ABOUT US</a><a class="active" href="products.html" aria-current="page">OUR PRODUCTS</a><a href="inquiry.html">INQUIRY</a><a href="contact.html">CONTACT US</a>
+    </nav>
+    <a class="button button-small nav-quote" href="inquiry.html">Get a Quote</a>
+  </div></header>
+
+  <main>
+    <section class="products-hero">
+      <div class="products-hero-overlay"></div>
+      <div class="products-hero-content">
+        <span class="products-kicker">Saptam Pharmachem</span>
+        <h1>Our Products</h1>
+        <p>Explore pharmaceutical raw materials for your business requirements.</p>
+        <a class="products-hero-button" href="#catalog">Browse Product Catalog <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="browse-section" aria-labelledby="browse-title">
+      <div class="products-container">
+        <div class="browse-heading"><h2 id="browse-title">Browse by Category</h2><p>Select a category to view its available products.</p></div>
+        <div class="category-tiles">
+          <a class="category-tile" href="#catalog" data-category-link="APIs"><span class="tile-icon" aria-hidden="true">✥</span><h3>Active Pharmaceutical Ingredients (APIs)</h3><p>Pharmaceutical active ingredients by therapeutic category.</p></a>
+          <a class="category-tile" href="#catalog" data-category-link="Common Chemicals"><span class="tile-icon" aria-hidden="true">⚗</span><h3>Common Chemicals</h3><p>Common chemicals for pharmaceutical applications.</p></a>
+          <a class="category-tile" href="#catalog" data-category-link="Vitamins"><span class="tile-icon" aria-hidden="true">✚</span><h3>Vitamins</h3><p>Vitamin ingredients for pharmaceutical products.</p></a>
+          <a class="category-tile" href="#catalog" data-category-link="Excipients"><span class="tile-icon" aria-hidden="true">◇</span><h3>Excipients</h3><p>Formulation ingredients, binders and fillers.</p></a>
+          <a class="category-tile" href="#catalog" data-category-link="Amino Acids"><span class="tile-icon" aria-hidden="true">⌘</span><h3>Amino Acids</h3><p>Amino acid ingredients for your product needs.</p></a>
+          <a class="category-tile" href="#catalog" data-category-link="Sweeteners"><span class="tile-icon" aria-hidden="true">❋</span><h3>Sweeteners</h3><p>Sweetener ingredients for pharmaceutical formulations.</p></a>
+          <a class="category-tile" href="#catalog" data-category-link="Beta-Carotene"><span class="tile-icon" aria-hidden="true">◉</span><h3>Beta-Carotene</h3><p>Beta-Carotene ingredients in multiple grades.</p></a>
+          <a class="category-tile" href="#catalog" data-category-link="Lycopene"><span class="tile-icon" aria-hidden="true">◍</span><h3>Lycopene</h3><p>Lycopene ingredients in multiple forms.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+      <div class="products-container">
+        <div class="catalog-toolbar">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Search by product or category..." autocomplete="off"><kbd>/</kbd></label>
+          <div class="catalog-sort"><label for="product-sort">Sort by:</label><select id="product-sort"><option value="catalog">Catalog order</option><option value="name">Name A–Z</option><option value="name-desc">Name Z–A</option></select></div>
+          <p class="results-count" id="results-count" aria-live="polite">Loading products…</p>
+        </div>
+
+        <div class="catalog-layout">
+          <aside class="filter-panel" aria-label="Filter products">
+            <div class="filter-title"><h2><span aria-hidden="true">☷</span> Filter Products</h2><button id="reset-filters" type="button">Reset</button></div>
+            <fieldset class="filter-group"><legend>Product Categories</legend><div id="category-filters" class="filter-options"></div></fieldset>
+            <div class="filter-note"><strong><span aria-hidden="true">✓</span> Product inquiries</strong><p>Contact us for product availability and requirements.</p><a href="inquiry.html">Request a quote →</a></div>
+          </aside>
+
+          <div class="catalog-results">
+            <div class="product-grid" id="product-grid" aria-live="polite"></div>
+            <p class="empty-results" id="empty-results" hidden>No products match your search. Try another name or category.</p>
+            <nav class="pagination" id="pagination" aria-label="Product pages"></nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="products-container footer-grid">
+    <div class="footer-about"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span>Saptam Pharmachem</span></a><p>Your trusted partner for pharmaceutical raw materials. We work to support quality, integrity and customer satisfaction in every partnership.</p></div>
+    <div><h2>Quick Links</h2><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products Catalog</a></li><li><a href="inquiry.html">Inquiry</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div><h2>Contact Us</h2><ul class="footer-contact"><li>Shop No-5, First Floor, Shanti Residency, Valasana Road, Idar, Gujarat - 383430, India</li><li><a href="tel:+919328234921">+91 93282 34921</a></li><li><a href="mailto:saptampharmachem@gmail.com">saptampharmachem@gmail.com</a></li></ul></div>
+    <div><h2>Get in Touch</h2><p>Have a product or supply question?</p><a class="footer-button" href="inquiry.html">Send an Inquiry</a></div>
+  </div><div class="products-container copyright"><span>© 2025 Saptam Pharmachem. All rights reserved.</span><span>Designed by D-ICON IT SOLUTION</span></div></footer>
+  <a class="whatsapp-float" href="https://wa.me/919328234921" aria-label="Chat with Saptam Pharmachem on WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.8 9.8 0 0 0-8.4 14.8L2.3 21.7l5-1.3A9.8 9.8 0 1 0 12 2Zm0 17.8a8 8 0 0 1-4.1-1.1l-.5-.3-2.9.8.8-2.8-.3-.5A8 8 0 1 1 12 19.8Z"/><path d="M8.5 7.3c-.3 0-.6.1-.8.4-.3.3-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.6 4 3.6 2 .8 2.4.6 2.9.6.4-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3l-1.8-.9c-.2-.1-.4-.1-.6.2l-.8 1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.5-.6c.2-.2.2-.4.3-.5.1-.2 0-.4 0-.6l-.8-1.9c-.2-.5-.4-.5-.7-.5h-.6Z"/></svg></a>
+</body>
+</html>
